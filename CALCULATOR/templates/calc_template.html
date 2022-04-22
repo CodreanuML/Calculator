@@ -1,0 +1,168 @@
+{% load static %} 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css"> 
+	<title></title>
+	
+</head>
+<body>
+
+	<div class=calculator>	
+	<div class="container">
+	<div class="row" id="display">
+		{{display}}
+		{{opd}}
+
+
+
+	</div>
+	<div class="row" id="keyboard">
+
+	<div class="btn1">
+	<form action="{% url 'CALC:calc' %}" method="get" name="DEL">
+  		<button name="DEL" type="submit" value="DEL">DEL</button>
+  	</form> 
+	</div>
+
+
+		<div class="btn4">
+	<form action="{% url 'CALC:calc' %}" method="get" name="AC">
+  		<button name="AC" type="submit" value="AC">AC</button>
+    </form> 
+	</div>
+
+	<div class="btn2">
+
+	</div>
+
+	<div class="btn3">
+
+	</div>
+
+
+
+
+	<div class="btn5">
+	<form action="{% url 'CALC:calc' %}" method="get" name="7">
+  		<button name="7" type="submit" value="7">7</button>
+  	</form> 
+	</div>
+
+	<div class="btn6">
+	<form action="{% url 'CALC:calc' %}" method="get" name="8">
+		<button name="8" type="submit" value="8">8</button>
+    </form> 
+	</div>
+
+	<div class="btn7">
+	<form action="{% url 'CALC:calc' %}" method="get" name="9">
+    	<button name="9" type="submit" value="9">9</button>
+    </form> 
+	</div>
+
+	<div class="btn8">
+	<form action="{% url 'CALC:calc' %}" method="get" name="%">
+  	<button name="%" type="submit" value="%">%</button>
+  	</form> 
+	</div>
+
+	<div class="btn9">
+	<form action="{% url 'CALC:calc' %}"method="get" name="4">
+		<button name="4" type="submit" value="4">4</button>
+  	</form> 
+	</div>
+
+	<div class="btn10">
+	<form action="{% url 'CALC:calc' %}" method="get" name="5">
+		<button name="5" type="submit" value="5">5</button>
+  	</form> 
+	</div>
+  
+  	<div class="btn11">
+	<form action="{% url 'CALC:calc' %}" method="get" name="6">
+	  	<button name="6" type="submit" value="6">6</button>
+    </form> 
+	</div>
+
+	<div class="btn12">
+	<form action="{% url 'CALC:calc' %}" method="get" name="*">
+    	<button name="*" type="submit" value="*">*</button>
+    </form> 
+	</div>
+
+	<div class="btn13">
+	<form action="{% url 'CALC:calc' %}" method="get" name="1">
+  		<button name="1" type="submit" value="1">1</button>
+  	</form> 
+	</div>
+
+	<div class="btn14">
+	<form action="{% url 'CALC:calc' %}" method="get" name="2">
+  		<button name="2" type="submit" value="2">2</button>
+  	</form> 
+	</div>
+  
+
+	<div class="btn15">
+	<form action="{% url 'CALC:calc' %}" method="get" name="3">
+  		<button name="3" type="submit" value="3">3</button>
+  	</form> 
+	</div>
+
+	<div class="btn16">
+	<form action="{% url 'CALC:calc' %}" method="get" name="-">
+  		<button name="-" type="submit" value="-">-</button>
+  	</form> 
+	</div>
+
+	<div class="btn17">
+	<form action="{% url 'CALC:calc' %}" method="get" name="0">
+  		<button name="0" type="submit" value="0">0</button>
+  	</form> 
+	</div>
+
+	<div class="btn18">
+	<form action="{% url 'CALC:calc' %}" method="get" name=".">
+  		<button name="." type="submit" value=".">.</button>
+  	</form> 
+	</div>
+  
+
+	<div class="btn19">
+	<form action="{% url 'CALC:calc' %}" method="get" name="eq">
+    	<button name="eq" type="submit" value="eq">=</button>
+  	</form> 
+	</div>
+
+	<div class="btn20">
+	<form action="{% url 'CALC:calc' %}" method="get" name="+">
+  		<button name="+" type="submit" value="+">+</button>
+  	</form> 
+	</div>
+
+
+
+
+
+	</div>
+
+	
+
+</div>
+
+
+
+		{% for message in messages %}
+	<div class="msg">		
+		
+		{{message}}
+		
+	</div>
+	{% endfor %}
+
+</body>
+</html>
